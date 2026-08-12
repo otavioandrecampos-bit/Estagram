@@ -24,11 +24,32 @@
             <p class="autor">Por: Otavio</p>
             <h2>meu primeiro post</h2>
             <p>meu primeiro post sobre tecnologia</p>
+            <button>❤️​<sspan>0</sspan></button>
+            <button>👎​<sspan>0</sspan></button>
             <div>
     </main>
     <footer>
         <p>por Otavio</p>
     </footer>
 </body>
+<script>
+    const botoes = document.querySelectorALL("button");
+
+    botoes.array.forEach(function (botao) {
+        let curtiu = false;
+        botao.addEventListner("click", botaoClicado);
+        function botaoClicado() {
+            let texto = botao.querySelectorALL("span");
+            if (curtiu === false) {
+                texto.textContent++;
+                curtiu = true;
+            }
+            else {
+                texto.textContent--;
+                curtiu = false;
+            }
+        }
+)
+</script>
 
 </html>
