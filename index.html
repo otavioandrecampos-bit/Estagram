@@ -1,55 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>𝔈𝔰𝔱𝔞𝔤𝔯𝔞𝔪</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <header>
-        <h1>Estagram</h1>
+        <h1>𝔈𝔰𝔱𝔞𝔤𝔯𝔞𝔪</h1>
         <p>Meu primeiro vlog</p>
     </header>
     <main>
-        <img src="img.png" alt="Um homem de óculos e com um impressionante bigode estilizado trabalha sorridente em seu escritório doméstico durante a noite. Ele está concentrado, digitando em seu teclado mecânico diante de dois grandes monitores repletos de linhas de código e telas de desenvolvimento.
-            A mesa de madeira traz o clássico combo de tecnologia e cultura pop: uma caneca com os dizeres **" CODE &
-            COFFEE"**, um ferro de solda eletrônico, pequenos vasos de suculentas e bonecos do Mestre Yoda e do Rick
-            (*Rick and Morty*). Logo ao lado, destacam-se livros bem conhecidos como **Clean Code**, **Python Crash
-            Course** e **Dune**. O ambiente ao fundo completa o clima, com uma estante cheia de livros e fios de luzes
-            decorativas que dão um toque super aconchegante ao espaço.">
-        <div>
-            <p class="autor">Por: Otavio</p>
-            <h2>meu primeiro post</h2>
-            <p>meu primeiro post sobre tecnologia</p>
-            <button>❤️​<sspan>0</sspan></button>
-            <button>👎​<sspan>0</sspan></button>
-            <div>
-    </main>
-    <footer>
-        <p>por Otavio</p>
-    </footer>
-</body>
-<script>
-    const botoes = document.querySelectorALL("button");
+        <img src="img.png" alt="Um homem de óculos e com um impressionante bigode estilizado trabalha sorridente em seu escritório doméstico durante a noite. Ele está concentrado, digitando em seu teclado mecânico diante de dois grandes monitores repletos de linhas de código e telas de desenvolvimento. A mesa de madeira traz o clássico combo de tecnologia e cultura pop: uma caneca com os dizeres 'CODE & COFFEE', um ferro de solda eletrônico, pequenos vasos de suculentas e bonecos do Mestre Yoda e do Rick (Rick and Morty). Logo ao lado, destacam-se livros bem conhecidos como Clean Code, Python Crash Course e Dune. O ambiente ao fundo completa o clima, com uma estante cheia de livros e fios de luzes decorativas que dão um toque super aconchegante ao espaço."> 
+        <div> 
+            <p class="autor">Por: Otavio</p> 
+            <h2>meu primeiro post</h2> 
+            <p>meu primeiro post sobre tecnologia</p> 
+            <button class="like-btn">❤️ <span>0</span></button> 
+            <button class="like-btn">👎 <span>0</span></button> 
+        </div> 
+    </main> 
+    <footer> 
+        <p>por Otavio</p> 
+    </footer> 
+</body> 
+<script> 
+    // Seleciona todos os botões com a classe 'like-btn'
+    const botoes = document.querySelectorAll(".like-btn"); 
 
-    botoes.array.forEach(function (botao) {
-        let curtiu = false;
-        botao.addEventListner("click", botaoClicado);
-        function botaoClicado() {
-            let texto = botao.querySelectorALL("span");
-            if (curtiu === false) {
-                texto.textContent++;
-                curtiu = true;
-            }
-            else {
-                texto.textContent--;
-                curtiu = false;
-            }
-        }
-)
-</script>
+    // Executa a função para cada botão encontrado
+    botoes.forEach(function (botao) { 
+        // Cada botão ganha seu próprio controle de clique individual
+        let curtiu = false; 
 
+        // Adiciona o ouvinte de clique corrigido
+        botao.addEventListener("click", function () { 
+            // Seleciona a tag span correta dentro deste botão específico
+            let texto = botao.querySelector("span"); 
+            
+            // Converte o texto atual para número inteiro
+            let totalAtual = parseInt(texto.textContent);
+
+            if (curtiu === false) { 
+                texto.textContent = totalAtual + 1; 
+                curtiu = true; 
+            } else { 
+                texto.textContent = totalAtual - 1; 
+                curtiu = false; 
+            } 
+        }); 
+    }); 
+</script> 
 </html>
