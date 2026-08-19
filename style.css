@@ -1,32 +1,42 @@
-header{
+header {
     background-color: aliceblue;
     color: rgb(172, 8, 131);
     text-align: center;
     max-width: 800px;
-    margin:0 auto;
+    margin: 0 auto;
 }
 
-
-
-main{
-    background-attachment:rgb(2, 2, 255);
+main {
+    background-color: rgb(2, 2, 255); /* Corrigido de background-attachment para background-color */
     color: rgb(0, 0, 0);
     text-align: center;
     max-width: 800px;
-    margin:0 auto;
-    border: Spx solid #fff;
+    margin: 0 auto;
+    border: 5px solid #fff; /* Corrigido de Spx para 5px */
     padding: 15px;
+    
+    /* Linhas abaixo adicionadas para garantir a centralização dos elementos internos */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-footer{
-    background-attachment:rgb(2, 2, 255);
+/* Nova regra para diminuir e ajustar a imagem dentro do main */
+main img {
+    max-width: 400px;    /* Define o tamanho menor para a imagem */
+    width: 100%;         /* Garante que ela seja responsiva em celulares */
+    height: auto;        /* Mantém a proporção sem distorcer */
+    margin-bottom: 20px; /* Cria um espaço entre a foto e o texto */
+}
+
+footer {
+    background-color: rgb(2, 2, 255); /* Corrigido de background-attachment para background-color */
     color: rgb(0, 0, 0);
     text-align: center;
     max-width: 800px;
-    margin:0 auto;
-    
+    margin: 0 auto;
 }
 
-.autor{
+.autor {
     font-weight: bold;
 }
