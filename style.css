@@ -7,30 +7,30 @@ header {
 }
 
 main {
-    background-color: rgb(2, 2, 535); /* Corrigido de background-attachment para background-color */
+    background-color: rgb(2, 2, 535); 
     color: rgb(0, 0, 0);
     text-align: center;
     max-width: 800px;
     margin: 0 auto;
-    border: 5px solid #fff; /* Corrigido de Spx para 5px */
+    border: 5px solid #fff; 
     padding: 15px;
     
-    /* Linhas abaixo adicionadas para garantir a centralização dos elementos internos */
+   
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* Nova regra para diminuir e ajustar a imagem dentro do main */
+
 main img {
-    max-width: 400px;    /* Define o tamanho menor para a imagem */
-    width: 100%;         /* Garante que ela seja responsiva em celulares */
-    height: auto;        /* Mantém a proporção sem distorcer */
-    margin-bottom: 20px; /* Cria um espaço entre a foto e o texto */
+    max-width: 400px;    
+    width: 100%;         
+    height: auto;        
+    margin-bottom: 20px;
 }
 
 footer {
-    background-color: rgb(2, 2, 245); /* Corrigido de background-attachment para background-color */
+    background-color: rgb(2, 2, 245); 
     color: rgb(0, 0, 0);
     text-align: center;
     max-width: 800px;
